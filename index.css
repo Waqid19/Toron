@@ -1,0 +1,215 @@
+/* === VARIABEL WARNA === */
+:root {
+    --umber: #362312;
+    --cyber: #ffd400;
+    --text-dark: #1a1a1a;
+    --text-gray: #666666;
+}
+
+/* === RESET DASAR === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* === NAVBAR === */
+header {
+    background-color: var(--umber);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo span {
+    border-bottom: 3px solid var(--cyber);
+    padding-bottom: 2px;
+}
+
+/* Styling tombol garis tiga */
+.menu-toggle {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a.active, nav a:hover {
+    color: var(--cyber);
+}
+
+/* === HERO SECTION === */
+.hero {
+    height: 60vh;
+    min-height: 450px;
+    background: linear-gradient(to right, rgba(54, 35, 18, 0.95) 0%, rgba(54, 35, 18, 0.6) 50%, rgba(54, 35, 18, 0.1) 100%), 
+                url('suramadu.png') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    color: var(--cyber);
+    font-size: 48px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--cyber);
+    color: var(--umber);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6bf00;
+}
+
+/* === DECORATIVE BORDER === */
+.pattern-border {
+    display: flex;
+    height: 35px;
+}
+
+.pattern { flex: 1; }
+.pattern.red { background-color: #8b2b2b; }
+.pattern.yellow { background-color: #e5b922; }
+.pattern.green { background-color: #436a31; }
+
+/* === SEKILAS TORON === */
+.sekilas {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.sekilas h2 {
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.sekilas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.sekilas-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+}
+
+.sekilas-item i {
+    font-size: 30px;
+    color: var(--umber);
+}
+
+.sekilas-item p {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* === FITUR UTAMA MADURA === */
+.fitur-utama {
+    padding: 20px 10% 80px;
+    text-align: center;
+}
+
+.fitur-utama h2 { font-size: 32px; color: var(--text-dark); margin-bottom: 10px; }
+.subtitle { color: var(--text-gray); max-width: 600px; margin: 0 auto 50px; font-size: 14px; line-height: 1.5; }
+.fitur-content { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.fitur-left { display: flex; align-items: center; flex: 1.2; gap: 30px; text-align: left; }
+.img-circle { background-color: var(--cyber); width: 200px; height: 200px; border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
+.img-circle img { width: 130px; object-fit: contain; }
+.fitur-text h3 { font-size: 24px; color: var(--text-dark); margin-bottom: 10px; }
+.fitur-text p { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
+.fitur-right { flex: 0.8; display: flex; justify-content: flex-end; }
+
+/* === FOOTER === */
+footer {
+    background-color: var(--umber);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 4px solid var(--cyber);
+}
+
+footer h3 { color: var(--cyber); margin-bottom: 1rem; }
+footer p { color: #a89f95; font-size: 0.9rem; }
+
+/* === RESPONSIVE UTILITY === */
+@media (max-width: 900px) {
+    .sekilas-grid { grid-template-columns: 1fr; }
+    .fitur-content { flex-direction: column; }
+    .fitur-left { flex-direction: column; text-align: center; }
+    .fitur-right { justify-content: center; }
+
+    /* PENGATURAN MENU HP */
+    .menu-toggle {
+        display: block; 
+    }
+
+    nav ul.nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px; 
+        right: 5%;
+        background-color: var(--umber);
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        gap: 20px;
+    }
+
+    nav ul.nav-list.active {
+        display: flex;
+    }
+}

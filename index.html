@@ -3,89 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medika Nusantara</title>
-    <link rel="stylesheet" href="landingpage.css">
+    <title>Toron ka Madura</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <img src="../logo.png" alt="Logo" class="logo-gambar">
-            <span>Medika Nusantara</span>
-        </div>
+        <div><img src="logo.png" alt="Logo" class="logo"></div>
+        
         <nav>
-            <a href="">Beranda</a>
-            <a href="../berita/berita.html">Berita</a>
-            <a href="../kontakUs/kontak.html">Kontak</a>
-            <a href="../jadwal/jadwal.html">Jadwal</a>
-            <a href="../login/login.html" class="tombol-masuk-nav">Daftar/Login</a>
+            <ul class="nav-list">
+                <li><a href="#" class="active">Beranda</a></li>
+                <li><a href="#">Sejarah</a></li>
+                <li><a href="#">Budaya</a></li>
+                <li><a href="#">Wisata</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
         </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
-    <section class="papan-utama">
-        <div class="konten-utama">
-            <h1>Selamat Datang di RS Medika Nusantara!</h1>
-            <p>Memberikan pelayanan kesehatan terbaik dan terpercaya untuk Anda dan keluarga.</p>
-            <a href="../login/login.html" class="tombol-utama">Daftar/Login</a>
-        </div>
-        <div class="gambar-utama">
-            <img src="dokter.png" alt="Gambar Dokter" >
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TORON KA MADURA</h1>
+            <p>sebuah platform etnowisata digital inovatif sebagai jembatan antara kekayaan tradisi lokal Pulau Madura dengan teknologi modern. Kata "Toron" diambil dari bahasa Madura yang berarti "pulang kampung" atau "turun", mencerminkan semangat untuk mengajak siapa pun kembali mengenali dan menghargai akar budaya serta kearifan lokal di empat kabupaten: Bangkalan, Sampang, Pamekasan, dan Sumenep. </p>
+            <a href="#" class="btn-primary">Jelajahi Sekarang</a>
         </div>
     </section>
 
-    <section class="fitur">
-        <div class="kartu-fitur">
-            <a href="../layanan/layanan.html">
-            <h3>Layanan Unggulan</h3>
-            <div class="layanan-kisi">
-                <div class="layanan-item">
-                    <img src="jantung.jpeg" alt="Jantung">
-                    <p>Jantung</p>
-                </div>
-                <div class="layanan-item">
-                    <img src="saraf.jpeg" alt="Saraf">
-                    <p>Saraf</p>
-                </div>
-                <div class="layanan-item">
-                    <img src="ibuanak.jpeg" alt="Ibu & Anak">
-                    <p>Ibu & Anak</p>
-                </div>
-            </div></a>
-        </div>
-       
-        <div class="kartu-fitur cari-dokter">
-            <h3>Temukan Dokter</h3>
-            <form action="../jadwal/jadwal.html" method="GET">
-                <select name="poliklinik">             
-                    <option value="semua" selected>Semua Poliklinik</option>
-                    <option value="jantung">Poli Jantung</option>
-                    <option value="saraf">Poli Saraf</option>
-                    <option value="anak">Poli Ibu & Anak</option>
-                    <option value="umum">Poli Umum</option>     
-                </select>
-                <input type="text" name="nama_dokter" placeholder="Nama Dokter">
-                <button type="submit">Cari</button>
-            </form>
-        </div>
+    <div class="pattern-border">
+        <div class="pattern yellow"></div>
+        <div class="pattern green"></div>
+    </div>
 
-        <div class="kartu-fitur"><a href="../fasilitas/fasilitas.html">
-            <h3>Fasilitas Kami</h3>
-            <div class="fasilitas-kisi">
-                <div class="fasilitas-item">
-                    <img src="ugd1.png" alt="UGD" class="ikon">
-                    <p>UGD 24 Jam</p>
-                </div>
-                <div class="fasilitas-item">
-                    <img src="radiologi.png" alt="Radiologi" class="ikon">
-                    <p>Radiologi</p>
-                </div>
-                <div class="fasilitas-item">
-                    <img src="lab.png" alt="Laboratorium" class="ikon">
-                    <p>Laboratorium</p>
-                </div>
-            </div></a>
-        </div>
-
+    <section class="sekilas">
+        <h2>Sekilas Toron</h2>
     </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
 </body>
 </html>
