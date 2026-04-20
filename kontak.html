@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Toron ka Madura</title>
+    <link rel="stylesheet" href="kontak.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo" class="logo"></div>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="card-sejarah.html">Sejarah</a></li>
+                <li><a href="budaya.html">Budaya</a></li>
+                <li><a href="wisata.html">Wisata</a></li>
+                <li><a href="kuliner.html">Kuliner</a></li>
+                <li><a href="" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="pattern-border">
+        <div class="pattern yellow"></div>
+        <div class="pattern green"></div>
+    </div>
+
+    <section class="sub-hero-kontak">
+        <div class="container-hero">
+            <span class="badge-hero"><i class="fa-solid fa-headset"></i> Layanan Informasi</span>
+            <h1>Hubungi Kami</h1>
+            <p>Punya pertanyaan seputar destinasi wisata, agenda budaya, atau ingin berkolaborasi? Jangan ragu untuk mengirimkan pesan kepada kami.</p>
+        </div>
+    </section>
+
+    <section class="kontak-section">
+        <div class="container">
+            <div class="kontak-grid">
+                
+                <div class="kontak-info">
+                    <h3>Informasi <span>Kontak</span></h3>
+                    <p class="info-desc">Kami siap membantu merencanakan perjalanan "Toron" Anda menjadi pengalaman yang tak terlupakan.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="text-box">
+                                <h4>Kantor Pusat</h4>
+                                <p>Jl. Raya Telang No. 2, Kamal, Kabupaten Bangkalan, Jawa Timur 69162</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="text-box">
+                                <h4>Email</h4>
+                                <p>halo@toronkamadura.id<br>kolaborasi@toronkamadura.id</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div class="text-box">
+                                <h4>Telepon / WhatsApp</h4>
+                                <p>+62 812-xxxx-xxxx<br>(Senin - Jumat, 08:00 - 17:00 WIB)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h4>Ikuti Perjalanan Kami</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kontak-form">
+                    <h3>Kirimkan <span>Pesan</span></h3>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subjek">Subjek / Topik</label>
+                            <input type="text" id="subjek" name="subjek" placeholder="Apa yang ingin Anda tanyakan?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pesan">Isi Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda secara detail di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Kirim Pesan <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* === VARIABEL WARNA === */
+:root {
+    --umber: #362312;
+    --cyber: #ffd400;
+    --text-dark: #1a1a1a;
+    --text-gray: #666666;
+    --bg-light: #fcfcfc; 
+    --border-color: #e0e0e0;
+}
+
+/* === RESET DASAR === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: var(--bg-light); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* === NAVBAR === */
+header {
+    background-color: var(--umber);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo { width: 100px; }
+.logo span { border-bottom: 3px solid var(--cyber); padding-bottom: 2px; }
+
+.menu-toggle { display: none; color: #ffffff; font-size: 24px; cursor: pointer; }
+nav ul { list-style: none; display: flex; gap: 30px; }
+nav a { color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+nav a.active, nav a:hover { color: var(--cyber); }
+
+/* === DECORATIVE BORDER === */
+.pattern-border { display: flex; height: 10px; }
+.pattern { flex: 1; }
+.pattern.red { background-color: #8b2b2b; }
+.pattern.yellow { background-color: var(--cyber); }
+.pattern.green { background-color: #436a31; }
+
+/* === SUB-HERO KONTAK === */
+.sub-hero-kontak {
+    padding: 80px 20px 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.container-hero { max-width: 700px; margin: 0 auto; }
+.badge-hero {
+    display: inline-block;
+    background-color: rgba(54, 35, 18, 0.1);
+    color: var(--umber);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.badge-hero i { color: var(--cyber); margin-right: 5px; }
+.sub-hero-kontak h1 { font-size: 42px; color: var(--umber); margin-bottom: 15px; }
+.sub-hero-kontak p { color: var(--text-gray); font-size: 16px; line-height: 1.6; }
+
+/* === KONTEN KONTAK === */
+.kontak-section {
+    padding: 40px 0 80px;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Kolom form lebih lebar */
+    gap: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+/* === KOLOM KIRI: INFO KONTAK === */
+.kontak-info {
+    background-color: var(--umber);
+    color: #ffffff;
+    padding: 50px 40px;
+}
+
+.kontak-info h3 { font-size: 28px; margin-bottom: 15px; color: #ffffff; }
+.kontak-info h3 span { color: var(--cyber); }
+.info-desc { color: #d0c8c0; font-size: 15px; line-height: 1.6; margin-bottom: 40px; }
+
+.info-list { display: flex; flex-direction: column; gap: 30px; margin-bottom: 50px; }
+.info-item { display: flex; gap: 20px; align-items: flex-start; }
+
+.icon-box {
+    width: 45px; height: 45px;
+    background-color: rgba(255, 212, 0, 0.1);
+    color: var(--cyber);
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 50%; font-size: 18px; flex-shrink: 0;
+}
+
+.text-box h4 { font-size: 16px; margin-bottom: 5px; color: #ffffff; }
+.text-box p { font-size: 14px; color: #d0c8c0; line-height: 1.6; }
+
+.social-media h4 { font-size: 16px; margin-bottom: 15px; color: #ffffff; }
+.social-icons { display: flex; gap: 15px; }
+.social-icons a {
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 40px; height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff; border-radius: 50%;
+    text-decoration: none; transition: all 0.3s;
+}
+.social-icons a:hover { background-color: var(--cyber); color: var(--umber); transform: translateY(-3px); }
+
+/* === KOLOM KANAN: FORMULIR === */
+.kontak-form {
+    padding: 50px 40px;
+}
+
+.kontak-form h3 { font-size: 28px; color: var(--text-dark); margin-bottom: 30px; }
+.kontak-form h3 span { color: var(--cyber); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--umber); margin-bottom: 8px; }
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text-dark);
+    background-color: #fcfcfc;
+    transition: all 0.3s;
+}
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cyber);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 212, 0, 0.2);
+}
+
+.btn-submit {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background-color: var(--umber); color: var(--cyber);
+    padding: 15px 30px; border: none; border-radius: 8px;
+    font-size: 16px; font-weight: bold; cursor: pointer;
+    transition: all 0.3s; margin-top: 10px; width: 100%; /* Tombol full width */
+}
+.btn-submit:hover { background-color: var(--cyber); color: var(--umber); }
+.btn-submit i { transition: transform 0.3s; }
+.btn-submit:hover i { transform: translateX(5px) translateY(-5px); }
+
+/* === FOOTER === */
+footer { background-color: var(--umber); color: #ffffff; text-align: center; padding: 2rem 1rem; border-top: 4px solid var(--cyber); }
+footer h3 { color: var(--cyber); margin-bottom: 1rem; }
+footer p { color: #a89f95; font-size: 0.9rem; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .menu-toggle { display: block; }
+    nav ul.nav-list {
+        display: none; flex-direction: column; position: absolute;
+        top: 80px; right: 5%; background-color: var(--umber);
+        width: 200px; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); gap: 20px;
+    }
+    nav ul.nav-list.active { display: flex; }
+    
+    .kontak-grid { grid-template-columns: 1fr; } /* Tumpuk atas bawah di HP */
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .kontak-info, .kontak-form { padding: 30px 20px; }
+}

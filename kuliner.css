@@ -1,0 +1,168 @@
+/* === VARIABEL WARNA === */
+:root {
+    --umber: #362312;
+    --cyber: #ffd400;
+    --text-dark: #1a1a1a;
+    --text-gray: #666666;
+    --bg-light: #fdfaf6; /* Warna krem hangat (khas kuliner) */
+    --tag-red: #d9381e;
+    --tag-green: #3b7a57;
+    --tag-orange: #f28500;
+}
+
+/* === RESET DASAR === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: var(--bg-light); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* === NAVBAR === */
+header {
+    background-color: var(--umber);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo { width: 100px; }
+.logo span { border-bottom: 3px solid var(--cyber); padding-bottom: 2px; }
+
+.menu-toggle { display: none; color: #ffffff; font-size: 24px; cursor: pointer; }
+nav ul { list-style: none; display: flex; gap: 30px; }
+nav a { color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+nav a.active, nav a:hover { color: var(--cyber); }
+
+/* === DECORATIVE BORDER === */
+.pattern-border { display: flex; height: 10px; }
+.pattern { flex: 1; }
+.pattern.red { background-color: #8b2b2b; }
+.pattern.yellow { background-color: var(--cyber); }
+.pattern.green { background-color: #436a31; }
+
+/* === SUB-HERO KULINER === */
+.sub-hero-kuliner {
+    padding: 60px 20px 50px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+.container-hero { max-width: 700px; margin: 0 auto; }
+.badge-hero {
+    display: inline-block;
+    background-color: rgba(255, 212, 0, 0.2);
+    color: var(--umber);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.badge-hero i { margin-right: 5px; color: var(--tag-orange); }
+.sub-hero-kuliner h1 { font-size: 42px; color: var(--umber); margin-bottom: 15px; }
+.sub-hero-kuliner p { color: var(--text-gray); font-size: 16px; line-height: 1.6; }
+
+/* === KATEGORI FILTER === */
+.kuliner-section { padding: 40px 0 80px; }
+
+.kategori-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.filter-btn {
+    padding: 8px 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    color: var(--text-gray);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.filter-btn:hover { border-color: var(--cyber); color: var(--umber); }
+.filter-btn.active { background-color: var(--umber); color: var(--cyber); border-color: var(--umber); }
+
+/* === GRID KULINER === */
+.kuliner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* === CARD KULINER === */
+.kuliner-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    border: 1px solid #f2f2f2;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.kuliner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.kuliner-img { position: relative; height: 250px; overflow: hidden; }
+.kuliner-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.kuliner-card:hover .kuliner-img img { transform: scale(1.1); }
+
+/* Tag Kategori Makanan */
+.kuliner-tag {
+    position: absolute; top: 15px; left: 15px;
+    color: #fff; padding: 5px 12px; border-radius: 6px;
+    font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.tag-utama { background-color: var(--tag-red); }
+.tag-kuah { background-color: var(--tag-orange); }
+.tag-jajanan { background-color: var(--tag-green); }
+
+/* Info Makanan */
+.kuliner-info { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+.rating { font-size: 13px; color: var(--text-gray); font-weight: 600; margin-bottom: 10px; }
+.rating i { color: var(--cyber); margin-right: 5px; }
+
+.kuliner-info h3 { font-size: 22px; color: var(--umber); margin-bottom: 12px; }
+.kuliner-info p { color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+
+.rekomendasi {
+    background-color: var(--bg-light);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--umber);
+    border-left: 3px solid var(--cyber);
+}
+.rekomendasi i { color: var(--tag-orange); margin-right: 5px; }
+
+/* === FOOTER === */
+footer { background-color: var(--umber); color: #ffffff; text-align: center; padding: 2rem 1rem; border-top: 4px solid var(--cyber); }
+footer h3 { color: var(--cyber); margin-bottom: 1rem; }
+footer p { color: #a89f95; font-size: 0.9rem; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .menu-toggle { display: block; }
+    nav ul.nav-list {
+        display: none; flex-direction: column; position: absolute;
+        top: 80px; right: 5%; background-color: var(--umber);
+        width: 200px; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); gap: 20px;
+    }
+    nav ul.nav-list.active { display: flex; }
+    .sub-hero-kuliner h1 { font-size: 32px; }
+    .kategori-filter { gap: 10px; }
+    .filter-btn { font-size: 12px; padding: 6px 15px; }
+}

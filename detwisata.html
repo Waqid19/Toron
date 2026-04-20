@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gili Labak - Toron ka Madura</title>
+    <link rel="stylesheet" href="detwisata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo" class="logo"></div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="card-sejarah.html">Sejarah</a></li>
+                <li><a href="budaya.html">Budaya</a></li>
+                <li><a href="wisata.html" class="active">Wisata</a></li>
+                <li><a href="kuliner.html">Kuliner</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="hero-immersive">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Sumenep, Madura</span>
+            <h1>Pulau Gili Labak</h1>
+            <p>Surga tersembunyi dengan pesona bawah laut yang menakjubkan.</p>
+        </div>
+    </section>
+
+    <section class="detail-content-wrapper">
+        <div class="detail-container">
+            
+            <a href="wisata.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+            </a>
+
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="stat-text">
+                        <strong>Jam Buka</strong>
+                        <span>24 Jam</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-ticket"></i></div>
+                    <div class="stat-text">
+                        <strong>Tiket Masuk</strong>
+                        <span>Gratis</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-ship"></i></div>
+                    <div class="stat-text">
+                        <strong>Akses</strong>
+                        <span>Sewa Perahu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-grid">
+                <div class="article-text">
+                    <h3>Tentang Destinasi</h3>
+                    <p>Gili Labak adalah sebuah pulau kecil seluas kurang lebih 5 hektar yang terletak di sebelah tenggara Pulau Madura. Meskipun ukurannya mungil dan bisa dikelilingi dengan berjalan kaki hanya dalam waktu 30 menit, pulau ini menyimpan keindahan yang luar biasa.</p>
+                    <p>Daya tarik utamanya terletak pada gradasi air laut yang sangat jernih—berubah dari biru muda menjadi biru tua—serta hamparan pasir putih bersih yang lembut di kaki. Perairan di sekitar Gili Labak memiliki ombak yang relatif tenang, menjadikannya lokasi yang sangat sempurna untuk <em>snorkeling</em> dan berenang.</p>
+                </div>
+                
+                <div class="article-sidebar">
+                    <h3>Fasilitas Tersedia</h3>
+                    <ul class="fasilitas-list">
+                        <li><i class="fa-solid fa-check"></i> Penyewaan Alat Snorkeling</li>
+                        <li><i class="fa-solid fa-check"></i> Warung Ikan Bakar Lokal</li>
+                        <li><i class="fa-solid fa-check"></i> Kamar Mandi / Bilas</li>
+                        <li><i class="fa-solid fa-check"></i> Gazebo / Tempat Istirahat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <h3>Peta & Denah Pulau</h3>
+                <p class="map-desc">Jelajahi titik-titik lokasi penting di Gili Labak sebelum kunjungan Anda.</p>
+                <div id="interactive-map-container">
+                    <iframe src="https://maps.app.goo.gl/HSQYX6gAgTQ6VmUB8" width="100%" height="350" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>

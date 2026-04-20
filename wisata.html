@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata - Toron ka Madura</title>
+    <link rel="stylesheet" href="wisata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo" class="logo"></div>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="card-sejarah.html">Sejarah</a></li>
+                <li><a href="budaya.html">Budaya</a></li>
+                <li><a href="" class="active">Wisata</a></li>
+                <li><a href="kuliner.html">Kuliner</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="pattern-border">
+        <div class="pattern yellow"></div>
+        <div class="pattern green"></div>
+    </div>
+
+    <section class="sub-hero-wisata">
+        <div class="container-hero">
+            <span class="badge-hero">Eksplorasi Pulau Garam</span>
+            <h1>Destinasi Wisata Pilihan</h1>
+            <p>Temukan keajaiban alam, tebing eksotis, hingga pulau tersembunyi di empat kabupaten Pulau Madura.</p>
+        </div>
+    </section>
+
+    <section class="wisata-section">
+        <div class="container">
+            <div class="wisata-grid">
+                
+                <div class="wisata-card">
+                    <div class="wisata-img">
+                        <img src="assets/gili labak.jpeg" alt="Gili Labak">
+                        <div class="wisata-badge"><i class="fa-solid fa-location-dot"></i> Sumenep</div>
+                    </div>
+                    <div class="wisata-info">
+                        <h3>Pulau Gili Labak</h3>
+                        <p>Pulau kecil dengan pasir putih yang sangat lembut dan taman bawah laut yang masih terjaga keasriannya.</p>
+                        <a href="detwisata.html" class="btn-wisata">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="wisata-card">
+                    <div class="wisata-img">
+                        <img src="assets/jaddih.jpeg" alt="Bukit Jaddih">
+                        <div class="wisata-badge"><i class="fa-solid fa-location-dot"></i> Bangkalan</div>
+                    </div>
+                    <div class="wisata-info">
+                        <h3>Bukit Jaddih</h3>
+                        <p>Eksotisme tebing kapur putih raksasa dengan danau berwarna toska yang menawan di tengah area penambangan.</p>
+                        <a href="#" class="btn-wisata">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="wisata-card">
+                    <div class="wisata-img">
+                        <img src="assets/toroan.jpeg" alt="Air Terjun Toroan">
+                        <div class="wisata-badge"><i class="fa-solid fa-location-dot"></i> Sampang</div>
+                    </div>
+                    <div class="wisata-info">
+                        <h3>Air Terjun Toroan</h3>
+                        <p>Keunikan air terjun yang alirannya jatuh langsung ke bibir pantai, menyajikan pemandangan yang langka di Indonesia.</p>
+                        <a href="#" class="btn-wisata">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="wisata-card">
+                    <div class="wisata-img">
+                        <img src="assets/jumiang.jpeg" alt="Pantai Jumiang">
+                        <div class="wisata-badge"><i class="fa-solid fa-location-dot"></i> Pamekasan</div>
+                    </div>
+                    <div class="wisata-info">
+                        <h3>Pantai Jumiang</h3>
+                        <p>Menikmati hamparan laut lepas dari atas tebing karang yang tenang, tempat terbaik untuk melihat matahari terbit.</p>
+                        <a href="#" class="btn-wisata">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
