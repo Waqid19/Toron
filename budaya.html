@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya - Toron ka Madura</title>
+    <link rel="stylesheet" href="budaya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo" class="logo"></div>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="card-sejarah.html">Sejarah</a></li>
+                <li><a href="" class="active">Budaya</a></li>
+                <li><a href="#">Wisata</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="pattern-border">
+        <div class="pattern yellow"></div>
+        <div class="pattern green"></div>
+    </div>
+
+    <section class="direktori-seni">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Harmoni & <span>Kreativitas</span></h2>
+                <p>Mengenal lebih dekat wadah pelestarian seni dan alunan nada khas Madura.</p>
+            </div>
+
+            <div class="seni-row">
+                <div class="seni-col">
+                    <h3 class="col-heading"><i class="fa-solid fa-masks-theater"></i> Sanggar Seni Aktif</h3>
+                    <div class="seni-list">
+                        <div class="seni-card">
+                            <div class="seni-icon"><i class="fa-solid fa-people-group"></i></div>
+                            <div class="seni-info">
+                                <h4>Sanggar Tarara</h4>
+                                <p>Fokus pada seni tari kreasi Madura dan teater tradisional.</p>
+                                <span class="lokasi"><i class="fa-solid fa-location-dot"></i> Bangkalan</span>
+                            </div>
+                        </div>
+                        <div class="seni-card">
+                            <div class="seni-icon"><i class="fa-solid fa-drum"></i></div>
+                            <div class="seni-info">
+                                <h4>Sanggar Makan Ati</h4>
+                                <p>Pelestarian musik patrol, saronen, dan kesenian tetabuhan.</p>
+                                <span class="lokasi"><i class="fa-solid fa-location-dot"></i> Sampang</span>
+                            </div>
+                        </div>
+                        <div class="seni-card">
+                            <div class="seni-icon"><i class="fa-solid fa-fan"></i></div>
+                            <div class="seni-info">
+                                <h4>Sanggar Pecut Samandiman</h4>
+                                <p>Pusat pelatihan seni pecut dan tari remo gaya Madura.</p>
+                                <span class="lokasi"><i class="fa-solid fa-location-dot"></i> Pamekasan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seni-col">
+                    <h3 class="col-heading"><i class="fa-solid fa-music"></i> Lagu Daerah Populer</h3>
+                    <div class="lagu-list">
+                        
+                        <div class="lagu-card" data-src="assets/TandukMajeng.mp3">
+                            <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                            <div class="lagu-info">
+                                <h4>Tanduk Majeng</h4>
+                                <p>Menceritakan ketangguhan nelayan Madura di lautan.</p>
+                            </div>
+                        </div>
+
+                        <div class="lagu-card" data-src="assets/PajjarLaggu.mp3">
+                            <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                            <div class="lagu-info">
+                                <h4>Pajjar Laggu</h4>
+                                <p>Melodi syahdu tentang keindahan fajar di desa.</p>
+                            </div>
+                        </div>
+
+                        <div class="lagu-card" data-src="assets/KerrabanSape.mp3">
+                            <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                            <div class="lagu-info">
+                                <h4>Karaban Sape</h4>
+                                <p>Lagu ritmis yang mengiringi semangat pesta Karapan Sapi.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <audio id="main-audio" src=""></audio>
+
+    <section class="kalender-event">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Kalender <span>Event Budaya</span> 2026</h2>
+                <p>Jangan lewatkan perhelatan akbar yang menjadi magnet wisata Pulau Madura.</p>
+            </div>
+
+            <div class="event-timeline">
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="bulan">AGU</span>
+                        <span class="tanggal">15</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Grand Final Karapan Sapi (Piala Presiden)</h3>
+                        <p class="event-lokasi"><i class="fa-solid fa-map-pin"></i> Stadion Pamekasan</p>
+                        <p>Puncak acara adu cepat sapi pacu se-Madura yang paling dinantikan. Ratusan pasang sapi terbaik memperebutkan gelar juara tingkat nasional.</p>
+                    </div>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="bulan">SEP</span>
+                        <span class="tanggal">28</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Festival Sapi Sonok</h3>
+                        <p class="event-lokasi"><i class="fa-solid fa-map-pin"></i> Lapangan Ketapang, Sampang</p>
+                        <p>Kontes kecantikan sapi betina Madura yang dirias dengan ornamen mewah, berjalan anggun mengikuti alunan musik saronen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        // 1. Logika Hamburger Menu
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            if(navList.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // 2. Logika Pemutar Lagu Daerah (Disempurnakan)
+        const audioPlayer = document.getElementById('main-audio');
+        const songCards = document.querySelectorAll('.lagu-card');
+        
+        // Simpan referensi kartu mana yang sedang aktif
+        let currentActiveCard = null;
+
+        songCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const songSrc = this.getAttribute('data-src');
+                const currentIcon = this.querySelector('.play-btn i');
+                
+                // KONDISI 1: Kartu yang diklik ADALAH kartu yang sedang aktif
+                if (currentActiveCard === this) {
+                    if (audioPlayer.paused) {
+                        // Jika sedang pause, maka Play
+                        audioPlayer.play();
+                        currentIcon.classList.replace('fa-play', 'fa-pause');
+                        this.classList.add('playing');
+                    } else {
+                        // Jika sedang play, maka Pause
+                        audioPlayer.pause();
+                        currentIcon.classList.replace('fa-pause', 'fa-play');
+                        this.classList.remove('playing');
+                    }
+                } 
+                // KONDISI 2: Kartu yang diklik BERBEDA dengan kartu yang sedang aktif
+                else {
+                    // Reset kartu yang aktif sebelumnya (jika ada)
+                    if (currentActiveCard) {
+                        currentActiveCard.classList.remove('playing');
+                        const oldIcon = currentActiveCard.querySelector('.play-btn i');
+                        oldIcon.classList.replace('fa-pause', 'fa-play');
+                    }
+
+                    // Ganti sumber lagu dan mainkan
+                    audioPlayer.src = songSrc;
+                    audioPlayer.play();
+                    
+                    // Update tampilan kartu baru
+                    currentIcon.classList.replace('fa-play', 'fa-pause');
+                    this.classList.add('playing');
+                    
+                    // Jadikan kartu ini sebagai kartu aktif yang baru
+                    currentActiveCard = this;
+                }
+            });
+        });
+
+        // Event saat lagu selesai berputar otomatis
+        audioPlayer.addEventListener('ended', function() {
+            if (currentActiveCard) {
+                const icon = currentActiveCard.querySelector('.play-btn i');
+                icon.classList.replace('fa-pause', 'fa-play');
+                currentActiveCard.classList.remove('playing');
+                currentActiveCard = null;
+            }
+        });
+    </script>
+
+</body>
+</html>

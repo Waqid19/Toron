@@ -1,0 +1,135 @@
+/* === VARIABEL WARNA === */
+:root {
+    --umber: #362312;
+    --cyber: #ffd400;
+    --text-dark: #1a1a1a;
+    --text-gray: #666666;
+    --bg-light: #ebe5db; 
+}
+
+/* === RESET DASAR === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: #ffffff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* === NAVBAR === */
+header {
+    background-color: var(--umber);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { width: 100px; }
+.logo span { border-bottom: 3px solid var(--cyber); padding-bottom: 2px; }
+
+.menu-toggle {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul { list-style: none; display: flex; gap: 30px; }
+nav a { color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+nav a.active, nav a:hover { color: var(--cyber); }
+
+/* === DECORATIVE BORDER === */
+.pattern-border { display: flex; height: 10px; } 
+.pattern { flex: 1; }
+.pattern.red { background-color: #8b2b2b; }
+.pattern.yellow { background-color: var(--cyber); }
+.pattern.green { background-color: #436a31; }
+
+/* === SECTION JUDUL TENGAH (UTILITY) === */
+.section-title-center { text-align: center; margin-bottom: 50px; }
+.section-title-center h2 { font-size: 32px; color: var(--text-dark); margin-bottom: 10px; }
+.section-title-center h2 span { color: var(--cyber); }
+.section-title-center p { color: var(--text-gray); font-size: 15px; }
+
+/* === DIREKTORI SENI & LAGU === */
+.direktori-seni { padding: 80px 0; background-color: #ffffff; }
+.seni-row { display: flex; gap: 40px; }
+.seni-col { flex: 1; background-color: var(--bg-light); padding: 30px; border-radius: 12px; border: 1px solid #eaeaea; }
+.col-heading { font-size: 20px; color: var(--text-dark); margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+.col-heading i { color: var(--cyber); }
+
+/* Sanggar Seni */
+.seni-list { display: flex; flex-direction: column; gap: 15px; }
+.seni-card { display: flex; align-items: flex-start; gap: 15px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); transition: transform 0.3s; }
+.seni-card:hover { transform: translateX(5px); border-left: 4px solid var(--cyber); }
+.seni-icon { width: 45px; height: 45px; background: rgba(255, 212, 0, 0.2); color: var(--umber); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; flex-shrink: 0; }
+.seni-info h4 { color: var(--text-dark); margin-bottom: 5px; font-size: 16px; }
+.seni-info p { font-size: 13px; color: var(--text-gray); margin-bottom: 8px; line-height: 1.5; }
+.lokasi { font-size: 11px; font-weight: bold; color: var(--cyber); text-transform: uppercase; }
+
+/* Lagu Daerah Interaktif */
+.lagu-list { display: flex; flex-direction: column; gap: 15px; }
+.lagu-card { display: flex; align-items: center; gap: 15px; background: #fff; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; border: 1px solid transparent; }
+.lagu-card:hover { background: var(--cyber); }
+.lagu-card:hover h4, .lagu-card:hover p, .lagu-card:hover .play-btn { color: var(--umber); }
+
+.play-btn { width: 40px; height: 40px; border: 2px solid var(--umber); color: var(--umber); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 14px; padding-left: 3px; transition: all 0.3s; }
+.lagu-info h4 { color: var(--text-dark); font-size: 15px; margin-bottom: 4px; transition: color 0.3s; }
+.lagu-info p { font-size: 13px; color: var(--text-gray); transition: color 0.3s; }
+
+/* Styling Tambahan: Saat lagu sedang diputar */
+.lagu-card.playing {
+    background-color: var(--cyber);
+    border: 1px solid var(--umber);
+    transform: translateX(5px);
+}
+.lagu-card.playing h4, 
+.lagu-card.playing p { color: var(--umber); font-weight: bold; }
+.lagu-card.playing .play-btn {
+    background-color: var(--umber);
+    color: var(--cyber);
+    border-color: var(--cyber);
+    padding-left: 0; /* Menyesuaikan posisi ikon pause agar di tengah */
+}
+
+/* === KALENDER EVENT === */
+.kalender-event { padding: 80px 0; background-color: var(--bg-light); }
+.event-timeline { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+.event-item { display: flex; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.event-item:hover { transform: translateY(-5px); }
+.event-date { background-color: var(--cyber); color: var(--umber); width: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; flex-shrink: 0; }
+.event-date .bulan { font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+.event-date .tanggal { font-size: 42px; font-weight: 900; line-height: 1; margin-top: 5px; }
+.event-content { padding: 30px; }
+.event-content h3 { color: var(--text-dark); font-size: 20px; margin-bottom: 10px; }
+.event-lokasi { font-size: 13px; color: #888; margin-bottom: 15px; font-weight: bold; }
+.event-lokasi i { color: var(--cyber); margin-right: 5px; }
+.event-content p:last-child { color: var(--text-gray); line-height: 1.6; font-size: 14px; }
+
+/* === FOOTER === */
+footer { background-color: var(--umber); color: #ffffff; text-align: center; padding: 2rem 1rem; border-top: 4px solid var(--cyber); }
+footer h3 { color: var(--cyber); margin-bottom: 1rem; }
+footer p { color: #a89f95; font-size: 0.9rem; }
+
+/* === RESPONSIVE UTILITY === */
+@media (max-width: 900px) {
+    /* PENGATURAN MENU HP */
+    .menu-toggle { display: block; }
+    nav ul.nav-list {
+        display: none; flex-direction: column; position: absolute;
+        top: 80px; right: 5%; background-color: var(--umber);
+        width: 200px; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); gap: 20px;
+    }
+    nav ul.nav-list.active { display: flex; }
+
+    /* LAYOUT HP BUDAYA */
+    .seni-row { flex-direction: column; }
+    .event-item { flex-direction: column; }
+    .event-date { width: 100%; flex-direction: row; gap: 15px; padding: 15px; }
+}

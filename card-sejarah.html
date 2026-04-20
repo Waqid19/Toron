@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah - Toron ka Madura</title>
+    <link rel="stylesheet" href="card-sejarah.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo Toron" class="logo"></div>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="" class="active">Sejarah</a></li>
+                <li><a href="budaya.html">Budaya</a></li>
+                <li><a href="#">Wisata</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="kisah-sejarah">
+        <div class="section-header">
+            <h2>Kumpulan Cuplikan <span>Sejarah</span></h2>
+            <p>Berbagai fragmen sejarah penting yang membentuk identitas Madura saat ini.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="history-card">
+                <div class="card-img">
+                    <img src="assets/saronen.webp" alt="Saronen">
+                    <span class="card-badge">Hiburan</span>
+                </div>
+                <div class="card-info">
+                    <h3>Saronen</h3>
+                    <p>Musik Saronen merupakan kesenian musik tiup tradisional khas Madura 
+                        yang memiliki akar sejarah kuat sebagai media dakwah Islam yang dikembangkan oleh Kyai Khatib Sendang (cucu Sunan Kudus).</p>
+                    <a href="Saronen.html" class="btn-read">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="history-card">
+                <div class="card-img">
+                    <img src="assets/wiraraja.webp" alt="Era Wiraraja">
+                    <span class="card-badge">Pahlawan</span>
+                </div>
+                <div class="card-info">
+                    <h3>Arya Wiraraja & Sumenep</h3>
+                    <p>Kisah kepemimpinan Arya Wiraraja yang menjadi tonggak penting hubungan antara Madura dan berdirinya Kerajaan Majapahit.</p>
+                    <a href="#" class="btn-read">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="history-card">
+                <div class="card-img">
+                    <img src="assets/batik-madura.jpg" alt="Batik">
+                    <span class="card-badge">Tradisi Kuno</span>
+                </div>
+                <div class="card-info">
+                    <h3>Evolusi Batik Madura</h3>
+                    <p>Perjalanan motif batik pesisiran yang berani, mencerminkan karakter orang Madura yang jujur, tegas, dan penuh semangat.</p>
+                    <a href="#" class="btn-read">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="history-card">
+                <div class="card-img">
+                    <img src="assets/anq.png" alt="Pesantren">
+                    <span class="card-badge">Religius</span>
+                </div>
+                <div class="card-info">
+                    <h3>Sejarah Pesantren</h3>
+                    <p>Masuknya pengaruh Islam dan berdirinya pondok pesantren tua yang menjadi pusat pendidikan dan budaya di Pulau Madura.</p>
+                    <a href="#" class="btn-read">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>

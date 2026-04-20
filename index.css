@@ -69,7 +69,7 @@ nav a.active, nav a:hover {
     height: 60vh;
     min-height: 450px;
     background: linear-gradient(to right, rgba(54, 35, 18, 0.95) 0%, rgba(54, 35, 18, 0.6) 50%, rgba(54, 35, 18, 0.1) 100%), 
-                url('suramadu.png') center/cover;
+                url('assets/suramadu.png') center/cover;
     display: flex;
     align-items: center;
     padding: 0 10%;

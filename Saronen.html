@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah - Toron ka Madura</title>
+    <link rel="stylesheet" href="Saronen.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div><img src="assets/logo.png" alt="Logo Toron" class="logo"></div>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="" class="active">Sejarah</a></li>
+                <li><a href="budaya.html">Budaya</a></li>
+                <li><a href="#">Wisata</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="pattern-border">
+        <div class="pattern yellow"></div>
+        <div class="pattern green"></div>
+    </div>
+
+    <section id="sejarah" class="sejarah-section">
+        <div class="container">
+
+            <div class="sejarah-row">
+                <div class="sejarah-image">
+                    <img src="assets/saronen.webp" alt="Sejarah Toron Madura">
+                    <div class="image-accent"></div>
+                </div>
+
+                <div class="sejarah-content">
+                    <span class="sub-heading">Menelusuri Akar Budaya</span>
+                    <h2 class="main-heading">Sejarah <span>Saronen</span> </h2>
+                    
+                    <p class="description">
+                        Musik Saronen merupakan kesenian musik tiup tradisional khas Madura 
+                        yang memiliki akar sejarah kuat sebagai media dakwah Islam
+                         yang dikembangkan oleh Kyai Khatib Sendang (cucu Sunan Kudus). 
+                         Terdiri dari sembilan instrumen yang melambangkan filosofi jumlah huruf dalam kalimat Bismillah,
+                          Saronen menggabungkan melodi alat musik tiup kayu dengan harmoni kendang, gong, dan kenong 
+                          yang menghasilkan irama dinamis serta enerjik. Dahulu, musik ini digunakan sebagai alat komunikasi 
+                          untuk mengumpulkan masyarakat di pasar, namun kini fungsinya telah berkembang 
+                          menjadi elemen wajib dalam perhelatan akbar seperti ritual Karapan Sapi, kontes Sapi Sonok, 
+                          hingga upacara sakral pernikahan.
+                    </p>
+                    <p class="description">
+                        Dalam setiap penampilannya, Saronen selalu berhasil menciptakan atmosfer yang "gemebyar" 
+                        atau penuh keceriaan lewat tempo musiknya yang cepat dan karakter suara yang melengking tinggi, 
+                        yang mencerminkan sifat terbuka serta semangat juang orang Madura. Tak sekadar hiburan, 
+                        kesenian ini merupakan simbol integrasi antara nilai-nilai religius dan ekspresi budaya lokal 
+                        yang tetap lestari hingga saat ini sebagai identitas bangsa. 
+                        Kehadirannya dalam arak-arakan rakyat tidak hanya memeriahkan suasana, 
+                        tetapi juga menjadi sarana mempererat persaudaraan dan menjaga kearifan lokal agar tetap bergema di tengah arus modernisasi.
+                    </p >
+                    <p>Sumber: <a href="https://madurapedia.com/baca/733/musik-saronen-madura-dari-karapan-sapi-hingga-arak-arakan-rakyat-gemebyar/ ">https://madurapedia.com/baca/733/musik-saronen-madura-dari-karapan-sapi-hingga-arak-arakan-rakyat-gemebyar/ </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Toron ka Madura</h3>
+        <p>&copy; 2026 Pelestari Budaya Madura. Merawat Tradisi, Menjaga Eksistensi.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+
+            if(navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
